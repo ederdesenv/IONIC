@@ -1,0 +1,29 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+/www
+
+# dependencies
+/node_modules
+
+# Angular / editors / OS
+.angular/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# capacitor
+/android
+/ios
+
+# assets gerados automaticamente pelo postinstall (scripts/copy-web-assets.js)
+src/assets/jeep-sqlite/
+src/assets/sql-wasm.wasm
+
+# misc
+npm-debug.log
+yarn-error.log
+testem.log
+/coverage

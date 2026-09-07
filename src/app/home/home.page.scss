@@ -1,0 +1,56 @@
+.done {
+  text-decoration: line-through;
+  color: #888;
+}
+ 
+ion-item.todo-item {
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+}
+ 
+.todo-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+  gap: 8px;
+}
+ 
+.todo-top {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  column-gap: 10px;
+}
+ 
+.todo-top ion-checkbox {
+  justify-self: start;
+  margin: 0;
+}
+ 
+span.todo-title {
+  font-size: 15px;
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
+  justify-self: start;
+  color: var(--ion-text-color, #000);
+}
+ 
+ion-input.todo-title {
+  font-size: 15px;
+}
+ 
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 34px;
+}
+ 
+.actions ion-button {
+  margin: 0;
+  font-size: 12px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+}

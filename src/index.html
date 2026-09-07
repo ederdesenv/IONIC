@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+
+  <base href="/" />
+
+  <meta name="color-scheme" content="light dark" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+  <!--
+    Web component "jeep-sqlite", usado pelo @capacitor-community/sqlite para
+    simular o SQLite no navegador (ng serve / build web). Carregado via
+    <script> (em vez de import no TypeScript) para evitar problemas de
+    bundling/timing com o Angular. Em build Android/iOS nativo este arquivo
+    não é necessário (o plugin usa SQLite nativo diretamente).
+  -->
+  <script type="module" src="assets/jeep-sqlite/jeep-sqlite.esm.js"></script>
+
+  <!-- add to homescreen for ios -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

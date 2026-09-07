@@ -1,0 +1,36 @@
+
+// Tema claro customizado
+$colors: (
+	primary:    #3880ff,
+	secondary:  #0cd1e8,
+	tertiary:   #7044ff,
+	success:    #10dc60,
+	warning:    #ffce00,
+	danger:     #f04141,
+	dark:       #222428,
+	medium:     #989aa2,
+	light:      #f4f5f8
+);
+
+:root {
+	--ion-background-color: #ffffff;
+	--ion-text-color: #222428;
+	--ion-color-primary: #3880ff;
+	--ion-color-primary-contrast: #fff;
+	--ion-color-secondary: #0cd1e8;
+	--ion-color-secondary-contrast: #fff;
+	--ion-color-tertiary: #7044ff;
+	--ion-color-tertiary-contrast: #fff;
+	--ion-color-success: #10dc60;
+	--ion-color-success-contrast: #fff;
+	--ion-color-warning: #ffce00;
+	--ion-color-warning-contrast: #222428;
+	--ion-color-danger: #f04141;
+	--ion-color-danger-contrast: #fff;
+	--ion-color-dark: #222428;
+	--ion-color-dark-contrast: #fff;
+	--ion-color-medium: #989aa2;
+	--ion-color-medium-contrast: #fff;
+	--ion-color-light: #f4f5f8;
+	--ion-color-light-contrast: #222428;
+}

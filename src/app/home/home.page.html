@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>TO-DO!</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentAddAlert()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="success">
+      <ion-title size="large">TO-DO!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let todo of todos" lines="full" class="todo-item">
+      <div class="todo-content">
+        <div class="todo-top">
+          <ion-checkbox
+            [(ngModel)]="todo.done"
+            (ionChange)="toggleDone(todo.id, todo.done)"
+          ></ion-checkbox>
+
+          <span
+            *ngIf="editId !== todo.id"
+            class="todo-title"
+            [class.done]="todo.done"
+          >
+            {{ todo.title }}
+          </span>
+          <ion-input
+            *ngIf="editId === todo.id"
+            [(ngModel)]="editTitle"
+            class="todo-title"
+          ></ion-input>
+        </div>
+
+        <div class="actions" *ngIf="editId !== todo.id">
+          <ion-button
+            size="small"
+            fill="outline"
+            color="primary"
+            (click)="startEdit(todo)"
+          >
+            EDITAR
+          </ion-button>
+          <ion-button
+            size="small"
+            fill="outline"
+            color="danger"
+            (click)="deleteTodo(todo.id)"
+          >
+            EXCLUIR
+          </ion-button>
+        </div>
+
+        <div class="actions" *ngIf="editId === todo.id">
+          <ion-button
+            size="small"
+            fill="solid"
+            color="success"
+            (click)="saveEdit()"
+          >
+            SALVAR
+          </ion-button>
+          <ion-button
+            size="small"
+            fill="outline"
+            color="medium"
+            (click)="cancelEdit()"
+          >
+            CANCELAR
+          </ion-button>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
