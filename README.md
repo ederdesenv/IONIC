@@ -1,3 +1,9 @@
+# Implementação do Ionic no Desenvolvimento de um aplicativo de gestão de Tarefas
+
+## Sobre o projeto
+
+Este projeto tem como objetivo atender a atividade avaliativa da disciplina de Desenvolvimento Mobile II do curso de Pos Graduação Latu Sensu em Desenvolvimento Web e Mobile - INSTITUTO FEDERAL SUDESTE DE MG - CAMPUS RIO POMBA.
+
 ## Arquitetura: Ionic + Angular + Capacitor + SQLite
 
 ## 🏗️ Camadas da Arquitetura
@@ -40,3 +46,8 @@ Camada híbrida que gerencia o armazenamento persistente dependendo da plataform
 2. **Angular reage** às ações do usuário e executa a lógica do serviço.
 3. **Capacitor escolhe** a plataforma (Web vs Mobile Nátivo).
 4. **SQLite grava** a informação no banco de dados apropriado.
+
+## Sistema Ionic TODO 
+O app é uma lista de tarefas (CRUD) feita com **Ionic 8 + Angular 20 (standalone) + Capacitor 7**. Os dados ficam em **SQLite**. No celular o plugin usa o SQLite nativo; no navegador ele simula o mesmo banco com **jeep-sqlite** (sql.js + WASM) e persiste no **IndexedDB**.
+
+O Angular sobe um shell Ionic com uma rota lazy para `HomePage`; a página só desenha e dispara eventos; o `TodoService` abre o SQLite (nativo ou jeep-sqlite no web), garante a tabela `todos` e traduz cada clique em SQL parametrizado, persistindo no IndexedDB quando a plataforma é `web`.
